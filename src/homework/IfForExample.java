@@ -6,7 +6,8 @@ public class IfForExample {
         a = 15;
         b = 8;
 
-        System.out.println("max: " + Math.max(a, b));
+        if (a > b) System.out.println("max: " + a);
+        if (a < b) System.out.println("max: " + b);
 
         System.out.println();
 
