@@ -14,5 +14,6 @@ public class BoolTest {
         if (b) System.out.println("Այս կոդը չի գործարկվում։");
 
         System.out.println("10 > 9 հավասար է " + (10>9));
+
     }
 }
