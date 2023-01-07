@@ -1,13 +1,16 @@
 package homework2;
 
-public class ArrayUntil {
+public class ArrayUtil {
 
     public static void main(String[] args) {
 
         int[] array = {15, 8, 41, 69, 54, 70, 32, 25, 74, 85};
 
         for (int i = 0; i < array.length; i++) {
-            System.out.print(array[i] + " ");
+            System.out.print(array[i]);
+            if (i != array.length - 1) {
+                System.out.print(", ");
+            }
 
         }
 
