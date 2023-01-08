@@ -52,8 +52,26 @@ public class ArrayUtil {
             }
         }
         System.out.println();
-//        Տպեք զույգերի քանակը։
-//        Տպեք կենտերի քանակը
+
+        System.out.print("Զույգերի քանակը՝ ");
+        int evenCount = 0;
+        for (int x : array) {
+            if (x % 2 == 0) {
+                evenCount++;
+            }
+        }
+        System.out.println(evenCount);
+
+        System.out.print("Կենտերի քանակը՝ ");
+        int oddCount = 0;
+        for (int x : array) {
+            if (x % 2 != 0) {
+                oddCount++;
+            }
+        }
+        System.out.println(oddCount);
+
+
         System.out.print("Մասիվի բոլոր թվերի միջին թվաբանականն է՝ ");
         int result = 0;
         for (int i = 0; i < array.length; i++) {
@@ -71,8 +89,10 @@ public class ArrayUtil {
 
         int lastIndex = array.length - 1;
         System.out.println("Մասիվի վերջին էլեմենտն է՝ " + array[lastIndex]);
-//        Տպեք մասիվի մեջտեղի էլեմենտը։
 
 
+        System.out.println("Մասիվի մեջտեղի էլեմենտն է՝ " + array[array.length/2]);
     }
+
+
 }
