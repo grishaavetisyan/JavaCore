@@ -11,13 +11,11 @@ public class ArrayUtil {
             if (i != array.length - 1) {
                 System.out.print(", ");
             }
-
         }
 
         System.out.println();
 
         int minValue = array[0];
-
         for (int i = 1; i < array.length; i++) {
             if (array[i] < minValue) {
                 minValue = array[i];
@@ -26,7 +24,6 @@ public class ArrayUtil {
         System.out.println("min value:" + minValue);
 
         int maxValue = array[0];
-
         for (int i = 1; i < array.length; i++) {
             if (array[i] > maxValue) {
                 maxValue = array[i];
@@ -40,7 +37,6 @@ public class ArrayUtil {
             if (array[i] % 2 == 0) {
                 System.out.print(array[i] + " ");
             }
-
         }
 
         System.out.println();
@@ -77,7 +73,7 @@ public class ArrayUtil {
         for (int i = 0; i < array.length; i++) {
             result = result + array[i];
         }
-        System.out.print(result / 5);
+        System.out.print(result / array.length);
 
         System.out.println();
 
@@ -93,6 +89,4 @@ public class ArrayUtil {
 
         System.out.println("Մասիվի մեջտեղի էլեմենտն է՝ " + array[array.length/2]);
     }
-
-
 }
