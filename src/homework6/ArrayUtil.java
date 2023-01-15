@@ -1,10 +1,7 @@
 package homework6;
 
 public class ArrayUtil {
-
-    int[] array = {15, 8, 41, 69, 54, 70, 32, 25, 74, 85};
-
-    void Array () {
+    void array (int [] array) {
         for (int i = 0; i < array.length; i++) {
             System.out.print(array[i]);
             if (i != array.length - 1) {
@@ -13,7 +10,7 @@ public class ArrayUtil {
         }
     }
 
-    void minValue () {
+    void minValue (int [] array) {
         int minValue = array[0];
         for (int i = 1; i < array.length; i++) {
             if (array[i] < minValue) {
@@ -23,7 +20,7 @@ public class ArrayUtil {
         System.out.println("min value:" + minValue);
     }
 
-    void maxValue () {
+    void maxValue (int [] array) {
         int maxValue = array[0];
         for (int i = 1; i < array.length; i++) {
             if (array[i] > maxValue) {
@@ -33,7 +30,7 @@ public class ArrayUtil {
         System.out.println("max value:" + maxValue);
     }
 
-    void evenElements () {
+    void evenElements (int [] array) {
         System.out.print("Մասիվի զույգ էլեմենտներն են՝ ");
         for (int i = 0; i < array.length; i++) {
             if (array[i] % 2 == 0) {
@@ -42,7 +39,7 @@ public class ArrayUtil {
         }
     }
 
-    void oddElements () {
+    void oddElements (int [] array) {
         System.out.print("Մասիվի կենտ էլեմենտներն են՝ ");
         for (int j = 0; j < array.length; j++) {
             if (array[j] % 2 != 0) {
@@ -51,7 +48,7 @@ public class ArrayUtil {
         }
     }
 
-    void evenCount () {
+    void evenCount (int [] array) {
         System.out.print("Զույգերի քանակը՝ ");
         int evenCount = 0;
         for (int x : array) {
@@ -62,7 +59,7 @@ public class ArrayUtil {
         System.out.println(evenCount);
     }
 
-    void oddCount () {
+    void oddCount (int [] array) {
         System.out.print("Կենտերի քանակը՝ ");
         int oddCount = 0;
         for (int x : array) {
@@ -73,7 +70,7 @@ public class ArrayUtil {
         System.out.println(oddCount);
     }
 
-    void mean () {
+    void mean (int [] array) {
         System.out.print("Մասիվի բոլոր թվերի միջին թվաբանականն է՝ ");
         int result = 0;
         for (int i = 0; i < array.length; i++) {
@@ -82,7 +79,7 @@ public class ArrayUtil {
         System.out.print(result / array.length);
     }
 
-    void result () {
+    void result (int [] array) {
         int result = 0;
         for (int i = 0; i < array.length; i++) {
             result = result + array[i];
@@ -90,16 +87,16 @@ public class ArrayUtil {
         System.out.println("Մասիվի էլեմենտների գումարն է՝ " + result);
     }
 
-    void firstElement () {
+    void firstElement (int [] array) {
         System.out.println("Մասիվի առաջին էլեմենտն է՝ " + array[0]);
     }
 
-    void lastElement () {
+    void lastElement (int [] array) {
         int lastIndex = array.length - 1;
         System.out.println("Մասիվի վերջին էլեմենտն է՝ " + array[lastIndex]);
     }
 
-    void meanElement () {
+    void meanElement (int [] array) {
         System.out.println("Մասիվի մեջտեղի էլեմենտն է՝ " + array[array.length/2]);
     }
 }

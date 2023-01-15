@@ -2,30 +2,32 @@ package homework6;
 
 public class ArrayUtilDemo {
     public static void main(String[] args) {
+
         ArrayUtil au = new ArrayUtil();
-        au.Array();
+        int[] array = {15, 8, 41, 69, 54, 70, 32, 25, 74, 85};
+        au.array(array);
         System.out.println();
-        au.minValue();
+        au.minValue(array);
         System.out.println();
-        au.maxValue();
+        au.maxValue(array);
         System.out.println();
-        au.evenElements();
+        au.evenElements(array);
         System.out.println();
-        au.oddElements();
+        au.oddElements(array);
         System.out.println();
-        au.evenCount();
+        au.evenCount(array);
         System.out.println();
-        au.oddCount();
+        au.oddCount(array);
         System.out.println();
-        au.mean();
+        au.mean(array);
         System.out.println();
-        au.result();
+        au.result(array);
         System.out.println();
-        au.firstElement();
+        au.firstElement(array);
         System.out.println();
-        au.lastElement();
+        au.lastElement(array);
         System.out.println();
-        au.meanElement();
+        au.meanElement(array);
 
     }
 }
