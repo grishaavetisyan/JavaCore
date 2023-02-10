@@ -31,5 +31,15 @@ public class DynamicArray {
             System.out.print(array[i] + " ");
         }
     }
+
+    void remove ()  {
+        int removeIndex = 2;
+        for (int i = 0; i < array.length-1; i++) {
+            if (array[i] == removeIndex) {
+
+
+        }
+        }
+    }
 }
 

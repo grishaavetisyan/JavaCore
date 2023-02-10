@@ -9,5 +9,6 @@ public class DynamicArrayDemo {
         da.print();
         System.out.println();
         System.out.println(da.getByIndex(2));
+        da.remove();
     }
 }
