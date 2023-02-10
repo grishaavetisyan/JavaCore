@@ -3,11 +3,13 @@ package homework.employee;
 public class EmployeeStorage {
     private Employee[] array = new Employee[10];
     private int size = 0;
+
     public void add(Employee value) {
         if (size == array.length)
             extend();
         array[size++] = value;
     }
+
     private void extend() {
         Employee[] newArray = new Employee[array.length + 10];
         for (int i = 0; i < size; i++) {
@@ -31,7 +33,7 @@ public class EmployeeStorage {
                 System.out.println(employee);
             }
         }
-        if (!found){
+        if (!found) {
             System.out.println("Company with " + keyword + " not found!");
         }
     }
