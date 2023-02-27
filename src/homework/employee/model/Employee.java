@@ -1,4 +1,4 @@
-package homework.employee;
+package homework.employee.model;
 
 import java.util.Objects;
 
@@ -10,6 +10,9 @@ public class Employee {
     private double salary;
     private String company;
     private String position;
+    private boolean active = true;
+
+
 
     public Employee(String name, String surname, String employeeID, double salary, String company, String position) {
         this.name = name;
@@ -72,18 +75,6 @@ public class Employee {
     }
 
     @Override
-    public String toString() {
-        return "Employee{" +
-                "name='" + name + '\'' +
-                ", surname='" + surname + '\'' +
-                ", employeeID='" + employeeID + '\'' +
-                ", salary=" + salary +
-                ", company='" + company + '\'' +
-                ", position='" + position + '\'' +
-                '}';
-    }
-
-    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
@@ -91,6 +82,7 @@ public class Employee {
         Employee employee = (Employee) o;
 
         if (Double.compare(employee.salary, salary) != 0) return false;
+        if (active != employee.active) return false;
         if (!Objects.equals(name, employee.name)) return false;
         if (!Objects.equals(surname, employee.surname)) return false;
         if (!Objects.equals(employeeID, employee.employeeID)) return false;
@@ -109,6 +101,29 @@ public class Employee {
         result = 31 * result + (int) (temp ^ (temp >>> 32));
         result = 31 * result + (company != null ? company.hashCode() : 0);
         result = 31 * result + (position != null ? position.hashCode() : 0);
+        result = 31 * result + (active ? 1 : 0);
         return result;
     }
+
+    public boolean isActive() {
+        return active;
+    }
+
+    public void setActive(boolean active) {
+        this.active = active;
+    }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                ", employeeID='" + employeeID + '\'' +
+                ", salary=" + salary +
+                ", company='" + company + '\'' +
+                ", position='" + position + '\'' +
+                ", active=" + active +
+                '}';
+    }
+
 }
