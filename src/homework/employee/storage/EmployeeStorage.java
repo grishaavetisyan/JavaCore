@@ -1,5 +1,6 @@
 package homework.employee.storage;
 
+import homework.employee.model.Company;
 import homework.employee.model.Employee;
 
 public class EmployeeStorage {
@@ -40,18 +41,14 @@ public class EmployeeStorage {
         return null;
     }
 
-    public void searchByName(String keyword) {
-        boolean found = false;
+    public void searchByCompany(Company company) {
         for (int i = 0; i < size; i++) {
             Employee employee = array[i];
-            if (employee.getCompany().contains(keyword)) {
-                found = true;
+            if (employee.getCompany().equals(company)) {
                 System.out.println(employee);
             }
         }
-        if (!found) {
-            System.out.println("Company with " + keyword + " not found!");
-        }
+
 
 
     }
